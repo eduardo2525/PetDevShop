@@ -9,6 +9,6 @@ router.get('/dogs', PageController.dogs);
 router.get('/cats', PageController.cats);
 router.get('/fishes', PageController.fishes);
 
-router.get('/seeach', SerachController.serach)
+router.get('/search', SerachController.search)
 
 export default router;
