@@ -7,6 +7,7 @@ import mainRoutes from './routes/index'
 dotenv.config();
 
 const server = express();
+const port = process.env.PORT || 4000;
 
 server.set('view engine', 'mustache');
 server.set('views', path.join(__dirname, 'views'));
@@ -20,4 +21,6 @@ server.use((req, res) => {
     res.render('pages/404');
 });
 
-server.listen(process.env.PORT);
+server.listen(port, () => {
+    console.log(`porta ${port}`)
+});
